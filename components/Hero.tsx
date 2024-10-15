@@ -24,13 +24,8 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative xl:my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          {/* Cambiar texto */}
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic web magic with Next.js
-          </h2>
-
           {/* Título con animación (fade in one by one) */}
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
@@ -39,14 +34,14 @@ const Hero = () => {
 
           {/* Texto debajo del H2 */}
           <p className="text-center md:tracking-wider mb-4 text-small md:text-lg lg:text-2xl">
-            Hi, I&apos;m Iván, a React Developer based in{" "}
+            Hi, I&apos;m Iván, a Frontend Developer based in{" "}
             <span className="text-blue-400 ">ARGENTINA</span>
           </p>
 
           {/* Botón que dirije a mis proyectos */}
           {/* Props personalizadas para agregar text, icono y posición del mismo, función handleClick */}
           {/* y otras clases que pasemos por props */}
-          <a href="#about">
+          <a href="#projects">
             <TailwindConnectButton
               title="Show my work"
               icon={<FaLocationArrow />}
