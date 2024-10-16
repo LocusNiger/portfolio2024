@@ -79,6 +79,8 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+
+        {/* Card n°5: la más grande con img de fondo ---> MODIFICAR */}
         <div
           className={`absolute right-0 -bottom-5 ${
             id === 5 && "w-full opacity-80"
@@ -120,6 +122,7 @@ export const BentoGridItem = ({
           {/* En la card n°2 se muestra el globo */}
           {id === 2 && <GlobeDemo />}
 
+          {/* Card n°3: my tech stack */}
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
               <div className="flex flex-col gap-3">
