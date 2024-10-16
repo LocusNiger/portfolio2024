@@ -29,15 +29,14 @@ const Hero = () => {
           {/* Título con animación (fade in one by one) */}
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transforming concepts into seamless User Experiences"
+            words="Shaping Ideas Into Engaging Web Experiences"
           />
 
           {/* Texto debajo del H2 */}
           <p className="text-center md:tracking-wider mb-4 text-small md:text-lg lg:text-2xl">
             Hi, I&apos;m Iván, a Frontend Developer based in{" "}
-            <span className="text-blue-400 ">ARGENTINA</span>
+            <span className="text-blue-400 ">ARGENTINA</span>.
           </p>
-
           {/* Botón que dirije a mis proyectos */}
           {/* Props personalizadas para agregar text, icono y posición del mismo, función handleClick */}
           {/* y otras clases que pasemos por props */}
