@@ -7,13 +7,12 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title:
-      "I design and develop high-performance web applications with a focus on clean code and great user experience.",
+    title: "My tech stack",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-start",
+    img: "",
     spareImg: "",
   },
   {
@@ -28,7 +27,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
+    title:
+      "Constantly learning and implementing the latest frontend technologies.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -39,11 +39,11 @@ export const gridItems = [
   {
     id: 4,
     title:
-      "Constantly learning and implementing the latest frontend technologies.",
+      "I design and develop high-performance web applications with a focus on clean code and great user experience.",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "justify-center w-full",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
@@ -63,7 +63,7 @@ export const gridItems = [
     title:
       "Looking to collaborate on innovative projects? Let’s make it happen!",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "md:col-span-2 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",

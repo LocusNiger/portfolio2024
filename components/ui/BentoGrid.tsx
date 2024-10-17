@@ -56,6 +56,7 @@ export const BentoGridItem = ({
     navigator.clipboard.writeText("sanchezivan.798@gmail.com");
     setCopied(true);
   };
+
   return (
     <div
       className={cn(
@@ -122,9 +123,9 @@ export const BentoGridItem = ({
           {/* En la card n°2 se muestra el globo */}
           {id === 2 && <GlobeDemo />}
 
-          {/* Card n°3: my tech stack */}
-          {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+          {/* Card n°1: my tech stack */}
+          {id === 1 && (
+            <div className="flex gap-1 lg:gap-5 w-fit -right-3 lg:-right-2">
               <div className="flex flex-col gap-3">
                 {["React.js", "Tailwind CSS", "JavaScript"].map((item) => (
                   <span
