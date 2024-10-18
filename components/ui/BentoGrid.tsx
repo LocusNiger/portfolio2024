@@ -7,7 +7,13 @@ import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import TailwindConnectButton from "./TailwindConnectButton";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoCopyOutline, IoLogoSass } from "react-icons/io5";
+import { FaBootstrap, FaGithub, FaReact, FaTrello } from "react-icons/fa6";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiNextdotjs, SiRedux, SiVisualstudiocode } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { FaCss3Alt, FaGit, FaHtml5, FaSlack } from "react-icons/fa";
 
 /* Este componente retorna 2 componentes: el grid y el elemento del grid */
 
@@ -108,7 +114,9 @@ export const BentoGridItem = ({
         <div
           className={cn(
             titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 lg:p-10"
+            `group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 lg:p-10 ${
+              id === 1 && "h-full bg-grid-white/[0.02]"
+            } `
           )}
         >
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10 ">
@@ -125,30 +133,110 @@ export const BentoGridItem = ({
 
           {/* Card n°1: my tech stack */}
           {id === 1 && (
-            <div className="flex gap-1 lg:gap-5 w-fit -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3">
-                {["React.js", "Tailwind CSS", "JavaScript"].map((item) => (
-                  <span
-                    key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+            <>
+              <div className="flex gap-1 lg:gap-5 w-full items-center justify-between">
+                {/* 1ERA COL DE ICONOS */}
+                <div className="flex flex-col gap-3 lg:gap-8">
+                  {[
+                    <FaReact
+                      className="text-7xl"
+                      color="#61dbfb"
+                      key="React-icon"
+                    />,
+                    <IoLogoJavascript
+                      className="text-7xl"
+                      color="#F0DB4F"
+                      key="JavaScript-icon"
+                    />,
+                    <RiTailwindCssFill
+                      className="text-7xl"
+                      color="#a5f3fc"
+                      key="Tailwind-icon"
+                    />,
+                  ].map((item) => item)}
+                </div>
+                {/* 2DA COL DE ICONOS */}
+                <div className="flex flex-col gap-3 lg:gap-8">
+                  {[
+                    <SiNextdotjs
+                      className="text-7xl"
+                      color="#ffffff"
+                      key="NextJs-icon"
+                    />,
+                    <SiTypescript
+                      className="text-7xl"
+                      color="#007acc"
+                      key="TypeScript-icon"
+                    />,
+                    <SiRedux
+                      className="text-7xl"
+                      color="#764abc"
+                      key="Redux-icon"
+                    />,
+                  ].map((item) => item)}
+                </div>
+                {/* 3RA COL DE ICONOS */}
+                <div className="flex flex-col gap-3 lg:gap-8">
+                  {[
+                    <FaHtml5
+                      className="text-7xl"
+                      color="#e34c26"
+                      key="HTML-icon"
+                    />,
+                    <FaCss3Alt
+                      className="text-7xl"
+                      color="#264de4"
+                      key="CSS-icon"
+                    />,
+                    <FaGit
+                      className="text-7xl"
+                      color="#f14e32"
+                      key="Git-icon"
+                    />,
+                  ].map((item) => item)}
+                </div>
+                {/* 4TA COL DE ICONOS */}
+                <div className="flex flex-col gap-3 lg:gap-8">
+                  {[
+                    <IoLogoSass
+                      className="text-7xl"
+                      color="#cd6799"
+                      key="SASS-icon"
+                    />,
+                    <FaBootstrap
+                      className="text-7xl"
+                      color="#563d7c"
+                      key="Bootstrap-icon"
+                    />,
+                    <FaTrello
+                      className="text-7xl"
+                      color="#0079bf"
+                      key="Trello-icon"
+                    />,
+                  ].map((item) => item)}
+                </div>
+                {/* 5TA COL DE ICONOS */}
+                <div className="flex flex-col gap-3 lg:gap-8">
+                  {[
+                    <FaGithub
+                      className="text-7xl"
+                      color="#fff"
+                      key="GitHub-icon"
+                    />,
+                    <SiVisualstudiocode
+                      className="text-7xl"
+                      color="#0078d7"
+                      key="VSC-icon"
+                    />,
+                    <FaSlack
+                      className="text-7xl"
+                      color="#fff"
+                      key="Slack-icon"
+                    />,
+                  ].map((item) => item)}
+                </div>
               </div>
-              <div className="flex flex-col gap-3 lg:gap-8">
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-                {["Next.js", "TypeScript", "Redux"].map((item) => (
-                  <span
-                    key={item}
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </>
           )}
           {id === 6 && (
             <div className="mt-5 relative">
