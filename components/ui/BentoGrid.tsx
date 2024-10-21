@@ -87,6 +87,13 @@ export const BentoGridItem = ({
           )}
         </div>
 
+        {/* La card n°6 tiene el gradiente de fondo */}
+        {id === 6 && (
+          <BackgroundGradientAnimation>
+            {/* <div className="absolute z-50 flex items-center justify-center text-white font-bold " /> */}
+          </BackgroundGradientAnimation>
+        )}
+
         {/* Descripción + título de cada card */}
         <div
           className={cn(
@@ -257,13 +264,6 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-
-        {/* La card n°6 tiene el gradiente de fondo */}
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            {/* <div className="absolute z-50 flex items-center justify-center text-white font-bold " /> */}
-          </BackgroundGradientAnimation>
-        )}
       </div>
     </div>
   );
