@@ -13,7 +13,7 @@ const TailwindConnectButton = ({
 }) => {
   return (
     <button
-      className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-lg p-px text-xs font-semibold leading-6  text-white inline-block w-full md:w-60 md:mt-10"
+      className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-lg p-px text-xs font-semibold leading-6  text-white inline-block w-full md:w-60"
       onClick={handleClick}
     >
       <span className="absolute inset-0 overflow-hidden rounded-lg">
@@ -24,7 +24,7 @@ const TailwindConnectButton = ({
       >
         {/* depende la posición que pase es donde renderizará el icono */}
         {position === "left" && icon}
-        <span>{title}</span>
+        <span className="lg:text-base">{title}</span>
         {position === "right" && icon}
       </div>
       <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
