@@ -87,29 +87,6 @@ export const BentoGridItem = ({
           )}
         </div>
 
-        {/* Card n°5: la más grande con img de fondo ---> MODIFICAR */}
-        <div
-          className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-80"
-          }`}
-        >
-          {/* SpareImg si es la card n°5 */}
-          {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              className="object-cover object-center w-full h-full"
-            />
-          )}
-        </div>
-
-        {/* La card n°6 tiene el gradiente de fondo */}
-        {id === 6 && (
-          <BackgroundGradientAnimation>
-            {/* <div className="absolute z-50 flex items-center justify-center text-white font-bold " /> */}
-          </BackgroundGradientAnimation>
-        )}
-
         {/* Descripción + título de cada card */}
         <div
           className={cn(
@@ -127,9 +104,6 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
-
-          {/* En la card n°2 se muestra el globo */}
-          {id === 2 && <GlobeDemo />}
 
           {/* Card n°1: my tech stack */}
           {id === 1 && (
@@ -238,6 +212,10 @@ export const BentoGridItem = ({
               </div>
             </>
           )}
+
+          {/* En la card n°2 se muestra el globo */}
+          {id === 2 && <GlobeDemo />}
+
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0 bottom`}>
@@ -263,6 +241,29 @@ export const BentoGridItem = ({
             </div>
           )}
         </div>
+
+        {/* Card n°5: la más grande con img de fondo ---> MODIFICAR */}
+        <div
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          }`}
+        >
+          {/* SpareImg si es la card n°5 */}
+          {spareImg && (
+            <img
+              src={spareImg}
+              alt={spareImg}
+              className="object-cover object-center w-full h-full"
+            />
+          )}
+        </div>
+
+        {/* La card n°6 tiene el gradiente de fondo */}
+        {id === 6 && (
+          <BackgroundGradientAnimation>
+            {/* <div className="absolute z-50 flex items-center justify-center text-white font-bold " /> */}
+          </BackgroundGradientAnimation>
+        )}
       </div>
     </div>
   );
