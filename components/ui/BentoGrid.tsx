@@ -14,6 +14,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiNextdotjs, SiRedux, SiVisualstudiocode } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { FaCss3Alt, FaGit, FaHtml5, FaSlack } from "react-icons/fa";
+import { Highlight } from "./HeroHighlight";
 
 /* Este componente retorna 2 componentes: el grid y el elemento del grid */
 
@@ -63,6 +64,32 @@ export const BentoGridItem = ({
     setCopied(true);
   };
 
+  const handleTitle = (id: number, title: string): React.ReactNode => {
+    switch (id) {
+      case 3:
+        return (
+          <>
+            Constantly learning and implementing{" "}
+            <Highlight className="text-white">
+              the latest frontend technologies.
+            </Highlight>
+          </>
+        );
+      case 4:
+        return (
+          <>
+            I design and develop high-performance web applications with a focus
+            on{" "}
+            <Highlight className="text-white">
+              clean code and great user experience
+            </Highlight>
+          </>
+        );
+      default:
+        return title;
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -109,7 +136,7 @@ export const BentoGridItem = ({
           <div
             className={`font-sans font-bold text-lg lg:text-3xl max-w-96 z-10 ${titleClassName}`}
           >
-            {title}
+            {handleTitle(id ?? 0, String(title ?? ""))}
           </div>
 
           {/* Card n°1: my tech stack */}
