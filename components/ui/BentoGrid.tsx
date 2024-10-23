@@ -11,9 +11,14 @@ import { IoCopyOutline, IoLogoSass } from "react-icons/io5";
 import { FaBootstrap, FaGithub, FaReact, FaTrello } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
-import { SiNextdotjs, SiRedux, SiVisualstudiocode } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiRedux,
+  SiVisualstudiocode,
+  SiVite,
+} from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
-import { FaCss3Alt, FaGit, FaHtml5, FaSlack } from "react-icons/fa";
+import { FaCss3Alt, FaGit, FaHtml5 } from "react-icons/fa";
 import { Highlight } from "./HeroHighlight";
 
 /* Este componente retorna 2 componentes: el grid y el elemento del grid */
@@ -236,10 +241,10 @@ export const BentoGridItem = ({
                       color="#0078d7"
                       key="VSC-icon"
                     />,
-                    <FaSlack
+                    <SiVite
                       className="text-7xl"
-                      color="#fff"
-                      key="Slack-icon"
+                      color="#bc34fe"
+                      key="Vite-icon"
                     />,
                   ].map((item) => item)}
                 </div>
