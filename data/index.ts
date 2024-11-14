@@ -1,9 +1,10 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
   { name: "Contact", link: "#contact" },
 ];
 
+// Data que va en el grid "About"
 export const gridItems = [
   {
     id: 1,
@@ -71,6 +72,7 @@ export const gridItems = [
   },
 ];
 
+// "Proyectos" (no se si lo voy a mostrar)
 export const projects = [
   {
     id: 1,
@@ -103,6 +105,27 @@ export const projects = [
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://github.com/adrianhajdin/iphone",
+  },
+];
+
+export const timelineData = [
+  {
+    year: "2022 - 2024",
+    company: "Ingeniería SCH SRL",
+    img: "@/public/IschLogo.png",
+    description:
+      "In my role as frontend developer, I led the development and design of interfaces for key projects such as 'Oficina Virtual' and 'Mesa de Entrada,' as well as an internal project for the company.\n\n" +
+      "I used technologies such as React, Tailwind CSS and Redux to build dynamic, scalable and performance optimized applications.\n\n" +
+      "In each project, I designed and developed interfaces from scratch, adding functionality that greatly improved the user experience, especially in areas such as advanced search, data loading and content personalization.\n\n" +
+      "Thanks to these efforts, the applications achieved high levels of usability and efficiency, meeting and even exceeding end-user expectations and raising the company's standards in terms of design and accessibility.",
+  },
+  {
+    year: "2021 - Present",
+    company: "Freelance",
+    description:
+      "Since 2021, as a freelance developer, I have designed and developed custom landing pages for a variety of clients, employing React to create modern, engaging and high-performing interfaces.\n\n" +
+      "In each project, my focus has been on building intuitive user experiences that enhance the visibility of products and services, allowing clients to stand out online and better achieve their business goals.\n\n" +
+      "These projects have been an excellent opportunity to hone my skills in design and frontend development, ensuring optimized sites tailored to each client's needs.",
   },
 ];
 
