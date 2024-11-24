@@ -1,79 +1,31 @@
 import { Calendar, Briefcase, Code, CheckCircle } from "lucide-react";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { experiences } from "@/data";
 
-type Experience = {
-  role: string;
-  company: string;
-  period: string;
-  projects: { name: string; description: string }[];
-  technologies: string[];
-  achievements: string[];
-};
-
-const experiences: Experience[] = [
+const words = [
   {
-    role: "Frontend Developer",
-    company: "Ingeniería SCH SRL",
-    period: "November 2022 - August 2024",
-    projects: [
-      {
-        name: "Oficina Virtual",
-        description: "Platform for online procedure management.",
-      },
-      {
-        name: "Mesa de Entrada",
-        description: "Document reception and distribution system.",
-      },
-      {
-        name: "IoT Platform",
-        description: "System for monitoring and managing IoT devices.",
-      },
-    ],
-    technologies: ["React", "Redux", "JavaScript", "Tailwind CSS", "Vite"],
-    achievements: [
-      "Implemented responsive interfaces to optimize usability on mobile devices, enhancing accessibility for operators.",
-      "Migrated the 'Mesa de Entrada' system from a command-based environment to an intuitive, minimalistic web platform, significantly improving user experience.",
-      "Designed and developed reusable components in React, increasing development efficiency in both current and future projects.",
-    ],
-  },
-  {
-    role: "Freelance Frontend Developer",
-    company: "Self-employed",
-    period: "2021 - Present",
-    projects: [
-      {
-        name: "Landing Pages for Various Clients",
-        description:
-          "Custom landing pages to showcase products and services effectively.",
-      },
-    ],
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "SASS",
-    ],
-    achievements: [
-      "Developed personalized, responsive landing pages to meet clients’ needs, enhancing their online presence.",
-      "Designed aesthetically appealing and intuitive interfaces, providing a seamless user experience.",
-      "Utilized reusable components and responsive design, reducing development time and improving site performance.",
-    ],
+    text: "Experience",
+    className: "text-blue-500 text-4xl font-bold",
   },
 ];
 
-const TechIcon: React.FC<{ tech: string }> = ({ tech }) => {
+const TechIcon: React.FC = () => {
   return <Code className="inline-block mr-2" size={18} />;
 };
 
 export default function ExperienceSection() {
   return (
-    <section className="py-16">
+    <section>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-center">Experience</h2>
+        <div className="flex justify-center items-center py-16">
+          <TypewriterEffectSmooth
+            words={words}
+            cursorClassName="bg-blue-500 h-11 w-[3px]"
+          />
+        </div>
         {experiences.map((exp, index) => (
           <div
-            className="space-y-8 bg-black-200 mb-10 rounded-3xl border border-white/[0.1]"
+            className="space-y-8 bg-black-200 mb-10 rounded-3xl border border-white/[0.1] hover:border-white/[0.3] hover:shadow-xl transition-all duration-300"
             key={index}
           >
             <div className="p-6 rounded-lg shadow-lg">
@@ -105,7 +57,7 @@ export default function ExperienceSection() {
                       key={idx}
                       className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-700"
                     >
-                      <TechIcon tech={tech} />
+                      <TechIcon />
                       {tech}
                     </span>
                   ))}

@@ -3,13 +3,12 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { Spotlight } from "./ui/Spotlight";
 import TailwindConnectButton from "./ui/TailwindConnectButton";
-// import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { HeroHighlight, Highlight } from "./ui/HeroHighlight";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="pb-20">
+    <div>
       <div className="flex justify-center items-center relative xl:my-20 z-10">
         <div className="flex flex-col items-center justify-center">
           {/* SPOTLIGHT: Efecto de luz en los textos */}

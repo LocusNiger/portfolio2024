@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import ExperienceV2 from "@/components/ExperienceV2";
 import { navItems } from "@/data";
-import RecentProjects from "@/components/RecentProjects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
         <ExperienceV2 />
-        <RecentProjects />
+        <Grid />
+        <Contact />
       </div>
     </main>
   );
