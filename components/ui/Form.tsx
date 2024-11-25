@@ -4,93 +4,101 @@ import { Input } from "./Input";
 import { cn } from "@/utils/cn";
 import {
   IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
+  IconBrandLinkedin,
+  IconDownload,
 } from "@tabler/icons-react";
+
+const resumePath = "/Resume-Ivan-Sanchez-Frontend.pdf";
 
 export function Form() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
   };
+
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Get in touch
-      </h2>
-      <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        If you have any questions, suggestions, or just want to chat about a
-        project, don&apos;t hesitate to get in touch. I&apos;m here to help and
-        explore new collaboration opportunities.
-      </p>
-
-      <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="John" type="text" />
+    <div className="grid grid-cols-7 grid-rows-1 gap-4">
+      <div className="col-span-4 bg-gradient-to-br relative group/btn from-black-100 dark:from-black-100 dark:to-black-200 to-black-200 flex flex-col items-center rounded-3xl p-4 shadow-input border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300">
+        <form onSubmit={handleSubmit} className="p-6 w-full">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+            <LabelInputContainer>
+              <Label htmlFor="firstname">First name</Label>
+              <Input id="firstname" placeholder="John" type="text" />
+            </LabelInputContainer>
+            <LabelInputContainer>
+              <Label htmlFor="lastname">Last name</Label>
+              <Input id="lastname" placeholder="Doe" type="text" />
+            </LabelInputContainer>
+          </div>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="email">Email Address</Label>
+            <Input id="email" placeholder="example@example.com" type="email" />
           </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Doe" type="text" />
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="message">Message</Label>
+            <Input
+              type="textarea"
+              id="message"
+              placeholder="Your message here..."
+            />
           </LabelInputContainer>
+
+          <button
+            className="relative group/btn bg-black-100 dark:bg-black-100 block w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+            type="submit"
+          >
+            Send message &rarr;
+            <BottomGradient />
+          </button>
+        </form>
+      </div>
+      <div className="col-span-3 col-start-5 flex flex-col gap-6">
+        <p className="text-neutral-600 text-center dark:text-neutral-300">
+          My links and resume are below.
+        </p>
+
+        <div className="flex flex-col mx-auto justify-center gap-6 w-[70%]">
+          <a href="https://github.com/locusniger" target="_blank">
+            <button
+              className=" relative group/btn border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300 flex space-x-2 items-center justify-center px-4 w-full text-black rounded-lg h-10 font-medium shadow-input dark:bg-black-100 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+              type="submit"
+            >
+              <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                GitHub
+              </span>
+              <BottomGradient />
+            </button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ivansanchez-frontend/"
+            target="_blank"
+          >
+            <button
+              className=" relative group/btn border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300 flex space-x-2 items-center justify-center px-4 w-full text-black rounded-lg h-10 font-medium shadow-input dark:bg-black-100 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+              type="submit"
+            >
+              <IconBrandLinkedin className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                LinkedIn
+              </span>
+              <BottomGradient />
+            </button>
+          </a>
+          <a href={resumePath} download>
+            <button
+              className=" relative group/btn border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300 flex space-x-2 items-center justify-center px-4 w-full text-black rounded-lg h-10 font-medium shadow-input dark:bg-black-100 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+              type="submit"
+            >
+              <IconDownload className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
+              <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                Download My Resume
+              </span>
+              <BottomGradient />
+            </button>
+          </a>
         </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="message">Message</Label>
-          <Input
-            type="textarea"
-            id="message"
-            placeholder="Your message here..."
-          />
-        </LabelInputContainer>
-
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Send message &rarr;
-          <BottomGradient />
-        </button>
-
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-
-        <div className="flex flex-col space-y-4">
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              GitHub
-            </span>
-            <BottomGradient />
-          </button>
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              Google
-            </span>
-            <BottomGradient />
-          </button>
-          <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
-            type="submit"
-          >
-            <IconBrandOnlyfans className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-              OnlyFans
-            </span>
-            <BottomGradient />
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 }

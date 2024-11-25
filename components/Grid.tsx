@@ -5,16 +5,12 @@ import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 const Grid = () => {
   const words = [
     {
-      text: "About",
-      className: "text-blue-500 text-4xl",
-    },
-    {
-      text: "me",
-      className: "text-blue-500 text-4xl",
+      text: "About me",
+      className: "text-white text-5xl",
     },
   ];
   return (
-    <section id="about">
+    <section id="about" className="sm:px-10 px-5">
       <div className="flex justify-center items-center py-16">
         <TypewriterEffectSmooth
           words={words}

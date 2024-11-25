@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div>
+    <div id="hero">
       <div className="flex justify-center items-center relative xl:my-20 z-10">
         <div className="flex flex-col items-center justify-center">
           {/* SPOTLIGHT: Efecto de luz en los textos */}
@@ -61,7 +61,7 @@ const Hero = () => {
             {/* y otras clases que pasemos por props */}
             <a href="#about">
               <TailwindConnectButton
-                title="Show my work"
+                title="Show my experience"
                 icon={<FaLocationArrow className="text-sm" />}
                 position="right"
               />
