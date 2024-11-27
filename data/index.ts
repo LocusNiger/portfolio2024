@@ -1,3 +1,8 @@
+import { FaCss3Alt, FaHtml5, FaReact, FaTrello } from "react-icons/fa";
+import { IoLogoJavascript, IoLogoSass } from "react-icons/io";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiNextdotjs, SiRedux, SiTypescript, SiVite } from "react-icons/si";
+
 export const navItems = [
   { name: "Home", link: "#hero" },
   { name: "Experience", link: "#experience" },
@@ -77,6 +82,7 @@ export const experiences = [
   {
     role: "Frontend Developer",
     company: "Ingeniería SCH SRL",
+    companyURL: "https://www.ingenieriasch.com.ar/es",
     period: "November 2022 - August 2024",
     projects: [
       {
@@ -92,11 +98,24 @@ export const experiences = [
         description: "System for monitoring and managing IoT devices.",
       },
     ],
-    technologies: ["React", "Redux", "JavaScript", "Tailwind CSS", "Vite"],
+    technologies: [
+      { name: "React", icon: FaReact, color: "#61dbfb" },
+      { name: "Redux", icon: SiRedux, color: "#764abc" },
+      { name: "JavaScript", icon: IoLogoJavascript, color: "#F0DB4F" },
+      { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#a5f3fc" },
+      { name: "Vite", icon: SiVite, color: "#bc34fe" },
+      { name: "Trello", icon: FaTrello, color: "#0079bf" },
+    ],
     achievements: [
       "Implemented responsive interfaces to optimize usability on mobile devices, enhancing accessibility for operators.",
       "Migrated the 'Mesa de Entrada' system from a command-based environment to an intuitive, minimalistic web platform, significantly improving user experience.",
-      "Designed and developed reusable components in React, increasing development efficiency in both current and future projects.",
+      "Designed, refactored, and developed reusable React components, improving performance and accelerating development across all projects.",
+      "Introduced advanced search functionalities in 'Mesa de Entrada,' enabling complex filtering, data exports, and improved operator workflows.",
+      "Led the front-end development of the IoT monitoring platform, implementing real-time data synchronization with Redux and Thunks to handle asynchronous operations efficiently.",
+      "Enhanced user experience across all projects by redesigning interfaces with modern UX/UI principles, introducing multi-filter capabilities, and optimizing workflows for both operators and end users.",
+      "Collaborated closely with backend developers to integrate APIs seamlessly, ensuring reliable and efficient communication between systems.",
+      "Learned and applied new technologies, such as Redux Thunks, to address project-specific challenges, demonstrating adaptability and a commitment to innovation.",
+      "Received positive feedback from operators for improving the functionality and aesthetics of legacy systems like 'Mesa de Entrada' and 'Oficina Virtual'.",
     ],
   },
   {
@@ -111,12 +130,15 @@ export const experiences = [
       },
     ],
     technologies: [
-      "React",
-      "Tailwind CSS",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "SASS",
+      { name: "React", icon: FaReact, color: "#61dbfb" },
+      { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#a5f3fc" },
+      { name: "Vite", icon: SiVite, color: "#bc34fe" },
+      { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+      { name: "JavaScript", icon: IoLogoJavascript, color: "#F0DB4F" },
+      { name: "TypeScript", icon: SiTypescript, color: "#007acc" },
+      { name: "HTML", icon: FaHtml5, color: "#e34c26" },
+      { name: "CSS", icon: FaCss3Alt, color: "#264de4" },
+      { name: "SASS", icon: IoLogoSass, color: "#cd6799" },
     ],
     achievements: [
       "Developed personalized, responsive landing pages to meet clients’ needs, enhancing their online presence.",

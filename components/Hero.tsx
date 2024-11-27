@@ -56,7 +56,7 @@ const Hero = () => {
               <span className="text-blue-400 ">ARGENTINA</span>.
             </p>
 
-            {/* Botón que dirije a mis proyectos */}
+            {/* Botón que dirije a mi experiencia */}
             {/* Props personalizadas para agregar text, icono y posición del mismo, función handleClick */}
             {/* y otras clases que pasemos por props */}
             <a href="#experience">

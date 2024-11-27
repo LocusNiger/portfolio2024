@@ -1,4 +1,4 @@
-import { Calendar, Briefcase, Code, CheckCircle } from "lucide-react";
+import { Calendar, Briefcase, CheckCircle } from "lucide-react";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { experiences } from "@/data";
 
@@ -8,10 +8,6 @@ const words = [
     className: "text-white text-5xl font-bold",
   },
 ];
-
-const TechIcon: React.FC = () => {
-  return <Code className="inline-block mr-2" size={18} />;
-};
 
 export default function ExperienceSection() {
   return (
@@ -37,7 +33,13 @@ export default function ExperienceSection() {
                   <h3 className="text-xl font-semibold">{exp.role}</h3>
                   <div className="flex items-center text-gray-600 mt-2 md:mt-0">
                     <Briefcase className="mr-2" size={18} />
-                    <span className="mr-4">{exp.company}</span>
+                    <a
+                      href={exp.companyURL}
+                      target="_blank"
+                      className="mr-4 hover:text-white transition-all duration-300"
+                    >
+                      {exp.company}
+                    </a>
                     <Calendar className="mr-2" size={18} />
                     <span>{exp.period}</span>
                   </div>
@@ -56,15 +58,22 @@ export default function ExperienceSection() {
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-700"
-                      >
-                        <TechIcon />
-                        {tech}
-                      </span>
-                    ))}
+                    {exp.technologies.map((tech, idx) => {
+                      const IconComponent = tech.icon;
+                      return (
+                        <span
+                          key={idx}
+                          className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-700"
+                        >
+                          <IconComponent
+                            className="mr-2"
+                            size={18}
+                            color={tech.color}
+                          />
+                          {tech.name}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
                 <div>
