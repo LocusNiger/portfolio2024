@@ -59,7 +59,7 @@ const Hero = () => {
             {/* Botón que dirije a mis proyectos */}
             {/* Props personalizadas para agregar text, icono y posición del mismo, función handleClick */}
             {/* y otras clases que pasemos por props */}
-            <a href="#about">
+            <a href="#experience">
               <TailwindConnectButton
                 title="Show my experience"
                 icon={<FaLocationArrow className="text-sm" />}

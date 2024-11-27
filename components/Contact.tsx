@@ -1,5 +1,7 @@
 import { Form } from "./ui/Form";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { SiMinds } from "react-icons/si";
+import { PiBrainThin } from "react-icons/pi";
 
 const Contact = () => {
   const words = [
@@ -20,12 +22,6 @@ const Contact = () => {
       className: "text-white text-5xl font-bold",
     },
   ];
-  const words2 = [
-    {
-      text: "Tell me more about yourself and what you've got in mind.",
-      className: "text-white text-3xl font-semibold",
-    },
-  ];
   return (
     <section
       id="contact"
@@ -33,14 +29,19 @@ const Contact = () => {
     >
       {/* Título */}
       <div className="flex flex-col justify-center items-center gap-4 pb-12">
-        <TypewriterEffectSmooth
-          words={words}
-          cursorClassName="bg-blue-500 h-11 w-[3px]"
-        />
-        <TypewriterEffectSmooth
-          words={words2}
-          cursorClassName="bg-blue-500 h-8 w-[2px]"
-        />
+        <div className="flex gap-4 items-center justify-center">
+          <SiMinds className="text-6xl text-yellow-400 transition-all duration-300 hover:text-yellow-500" />
+          <TypewriterEffectSmooth
+            words={words}
+            cursorClassName="bg-blue-500 h-11 w-[3px]"
+          />
+        </div>
+        <div className="flex gap-4 items-center">
+          <p className="text-white text-3xl font-semibold">
+            Tell me more about yourself and what you&apos;ve got in mind
+          </p>
+          <PiBrainThin className="text-5xl text-rose-400 hover:text-rose-500 transition-all duration-300" />
+        </div>
       </div>
       <Form />
     </section>
