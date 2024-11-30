@@ -7,40 +7,134 @@ import {
   IconBrandLinkedin,
   IconDownload,
 } from "@tabler/icons-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
+// Link al resume para descargar
 const resumePath = "/Resume-Ivan-Sanchez-Frontend.pdf";
 
+// Definición del esquema de validación usando Zod
+const formSchema = z.object({
+  firstname: z.string().min(1, "Name is required."),
+  lastname: z.string().min(1, "Last name is required."),
+  email: z.string().email("Invalid Email."),
+  message: z.string().min(30, "The message must be at least 30 characters."),
+});
+
+// Tipo inferido del esquema para TypeScript
+type FormData = z.infer<typeof formSchema>;
+
 export function Form() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
+  // Hook useForm con validación de Zod
+  const {
+    register, // Función para registrar campos del formulario
+    handleSubmit, // Manejador de envío del formulario
+    formState: { errors }, // Estado de errores del formulario
+    reset, // Agregamos reset de react-hook-form
+  } = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+  });
+
+  // Función que se ejecuta al enviar el formulario
+  const onSubmit = async (data: FormData) => {
+    console.log("TEST2");
+    try {
+      // Envío del email usando EmailJS
+      await emailjs.send(
+        "service_locusniger", // ID del servicio
+        "template_hara2m8", // ID de la plantilla
+        {
+          // Datos a enviar
+          first_name: data.firstname,
+          last_name: data.lastname,
+          email: data.email,
+          message: data.message,
+          date_time: new Date().toLocaleString(),
+          location: window.location.href,
+        },
+        "mT-53lqh54E6u4NjI" // Public key de EmailJS
+      );
+      toast.success("Message sent successfully!", {
+        duration: 4000, // Duración en ms
+        position: "bottom-center", // Posición de la alerta
+        style: {
+          background: "#18181B",
+          color: "#fff",
+          border: "1px solid rgba(255,255,255,0.1)",
+        },
+      });
+      // Resetear el formulario después de enviar exitosamente
+      reset();
+    } catch (error) {
+      console.log("Detailed error:", error);
+      toast.error(
+        `Error sending the message: ${
+          error instanceof Error ? error.message : "Unknown"
+        }`,
+        {
+          duration: 4000,
+          position: "bottom-center",
+        }
+      );
+    }
   };
 
   return (
     <div className="grid grid-cols-7 grid-rows-1 gap-4">
       <div className="col-span-4 bg-gradient-to-br relative group/btn from-black-100 dark:from-black-100 dark:to-black-200 to-black-200 flex flex-col items-center rounded-3xl p-4 shadow-input border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300">
-        <form onSubmit={handleSubmit} className="p-6 w-full">
+        <form onSubmit={handleSubmit(onSubmit)} className="p-6 w-full">
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <LabelInputContainer>
               <Label htmlFor="firstname">First name</Label>
-              <Input id="firstname" placeholder="John" type="text" />
+              <Input
+                {...register("firstname")}
+                placeholder="John"
+                type="text"
+              />
+              {errors.firstname && (
+                <span className="text-red-500 text-sm">
+                  {errors.firstname.message}
+                </span>
+              )}
             </LabelInputContainer>
             <LabelInputContainer>
               <Label htmlFor="lastname">Last name</Label>
-              <Input id="lastname" placeholder="Doe" type="text" />
+              <Input {...register("lastname")} placeholder="Doe" type="text" />
+              {errors.lastname && (
+                <span className="text-red-500 text-sm">
+                  {errors.lastname.message}
+                </span>
+              )}
             </LabelInputContainer>
           </div>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="example@example.com" type="email" />
+            <Input
+              {...register("email")}
+              placeholder="example@example.com"
+              type="email"
+            />
+            {errors.email && (
+              <span className="text-red-500 text-sm">
+                {errors.email.message}
+              </span>
+            )}
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="message">Message</Label>
-            <Input
-              type="textarea"
-              id="message"
+            <textarea
+              {...register("message")}
+              className="w-full h-32 p-2 rounded-md border border-white/[0.1] bg-black-100 text-neutral-300"
               placeholder="Your message here..."
             />
+            {errors.message && (
+              <span className="text-red-500 text-sm">
+                {errors.message.message}
+              </span>
+            )}
           </LabelInputContainer>
 
           <button

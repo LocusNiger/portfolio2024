@@ -2,6 +2,7 @@ import { Form } from "./ui/Form";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { SiMinds } from "react-icons/si";
 import { PiBrainThin } from "react-icons/pi";
+import { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const words = [
@@ -43,6 +44,7 @@ const Contact = () => {
           <PiBrainThin className="text-5xl text-rose-400 hover:text-rose-500 transition-all duration-300" />
         </div>
       </div>
+      <Toaster />
       <Form />
     </section>
   );
