@@ -57,21 +57,22 @@ export default function RootLayout({
         <meta property="og:url" content="https://ivansanchez.vercel.app/" />
 
         {/* Schema Markup */}
-        <script type="application/ld+json">
-          {`
-            {
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Iván",
-              "jobTitle": "Frontend Developer",
-              "url": "https://ivansanchez.vercel.app/",
-              "sameAs": [
+              name: "Iván Sánchez",
+              jobTitle: "Frontend Developer",
+              url: "https://ivansanchez.vercel.app/",
+              sameAs: [
                 "https://www.linkedin.com/in/ivansanchez-frontend/",
-                "https://github.com/locusniger"
-              ]
-            }
-          `}
-        </script>
+                "https://github.com/locusniger",
+              ],
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
