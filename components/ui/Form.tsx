@@ -83,8 +83,8 @@ export function Form() {
   };
 
   return (
-    <div className="grid grid-cols-7 grid-rows-1 gap-4">
-      <div className="col-span-4 bg-gradient-to-br relative group/btn from-black-100 dark:from-black-100 dark:to-black-200 to-black-200 flex flex-col items-center rounded-3xl p-4 shadow-input border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300">
+    <div className="grid grid-cols-1 md:grid-cols-7 gap-4">
+      <div className="col-span-1 md:col-span-4 bg-gradient-to-br relative group/btn from-black-100 dark:from-black-100 dark:to-black-200 to-black-200 flex flex-col items-center rounded-3xl p-4 shadow-input border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300">
         <form onSubmit={handleSubmit(onSubmit)} className="p-6 w-full">
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <LabelInputContainer>
@@ -146,12 +146,12 @@ export function Form() {
           </button>
         </form>
       </div>
-      <div className="col-span-3 col-start-5 flex flex-col gap-6">
-        <p className="text-neutral-600 text-center dark:text-neutral-300">
+      <div className="col-span-1 md:col-span-3 flex flex-col gap-6 mt-4 md:mt-0">
+        <p className="text-neutral-600 text-2xl md:text-base text-center dark:text-neutral-300">
           My links and resume are below.
         </p>
 
-        <div className="flex flex-col mx-auto justify-center gap-6 w-[70%]">
+        <div className="flex flex-col mx-auto justify-center gap-6 w-full">
           <a href="https://github.com/locusniger" target="_blank">
             <button
               className=" relative group/btn border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300 flex space-x-2 items-center justify-center px-4 w-full text-black rounded-lg h-10 font-medium shadow-input dark:bg-black-100 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
