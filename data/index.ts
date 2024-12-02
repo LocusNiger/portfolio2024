@@ -18,7 +18,8 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-1 ",
     imgClassName: "",
-    titleClassName: "text-end pb-5",
+    titleClassName:
+      "text-center text-3xl mt-2 md:mt-0 md:text-2xl md:text-end pb-5",
     img: "",
     spareImg: "",
   },
@@ -28,7 +29,7 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "text-center text-2xl md:justify-start mt-2 md:mt-0",
     img: "",
     spareImg: "",
   },
@@ -60,7 +61,8 @@ export const gridItems = [
     title: "Your ideas, my code. Let’s create something great together.",
     description: "",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+    imgClassName:
+      "absolute right-0 bottom-0 md:w-96 w-72 opacity-50 md:opacity-100",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
     spareImg: "/grid.svg",
@@ -70,7 +72,7 @@ export const gridItems = [
     title:
       "Looking to collaborate on innovative projects? Let’s make it happen!",
     description: "",
-    className: "md:col-span-2 md:row-span-2",
+    className: "md:col-span-2 md:row-span-2 py-4 md:py-0",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",

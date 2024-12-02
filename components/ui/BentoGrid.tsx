@@ -20,6 +20,7 @@ import {
 import { SiTypescript } from "react-icons/si";
 import { FaCss3Alt, FaGit, FaHtml5 } from "react-icons/fa";
 import { Highlight } from "./HeroHighlight";
+import Image from "next/image";
 
 /* Este componente retorna 2 componentes: el grid y el elemento del grid */
 
@@ -111,10 +112,12 @@ export const BentoGridItem = ({
         <div className="w-full h-full absolute">
           {/* Imagen que se usa de fondo */}
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover, object-center")}
+              layout="fill"
+              objectFit="cover"
             />
           )}
         </div>
@@ -149,100 +152,100 @@ export const BentoGridItem = ({
             <>
               <div className="flex gap-1 lg:gap-5 w-full items-center justify-between">
                 {/* 1ERA COL DE ICONOS */}
-                <div className="flex flex-col gap-3 lg:gap-8">
+                <div className="flex flex-col gap-4 lg:gap-8">
                   {[
                     <FaReact
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#61dbfb"
                       key="React-icon"
                     />,
                     <IoLogoJavascript
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#F0DB4F"
                       key="JavaScript-icon"
                     />,
                     <RiTailwindCssFill
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#a5f3fc"
                       key="Tailwind-icon"
                     />,
                   ].map((item) => item)}
                 </div>
                 {/* 2DA COL DE ICONOS */}
-                <div className="flex flex-col gap-3 lg:gap-8">
+                <div className="flex flex-col gap-4 lg:gap-8">
                   {[
                     <SiNextdotjs
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#ffffff"
                       key="NextJs-icon"
                     />,
                     <SiTypescript
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#007acc"
                       key="TypeScript-icon"
                     />,
                     <SiRedux
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#764abc"
                       key="Redux-icon"
                     />,
                   ].map((item) => item)}
                 </div>
                 {/* 3RA COL DE ICONOS */}
-                <div className="flex flex-col gap-3 lg:gap-8">
+                <div className="flex flex-col gap-4 lg:gap-8">
                   {[
                     <FaHtml5
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#e34c26"
                       key="HTML-icon"
                     />,
                     <FaCss3Alt
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#264de4"
                       key="CSS-icon"
                     />,
                     <FaGit
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#f14e32"
                       key="Git-icon"
                     />,
                   ].map((item) => item)}
                 </div>
                 {/* 4TA COL DE ICONOS */}
-                <div className="flex flex-col gap-3 lg:gap-8">
+                <div className="flex flex-col gap-4 lg:gap-8">
                   {[
                     <IoLogoSass
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#cd6799"
                       key="SASS-icon"
                     />,
                     <FaBootstrap
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#563d7c"
                       key="Bootstrap-icon"
                     />,
                     <FaTrello
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#0079bf"
                       key="Trello-icon"
                     />,
                   ].map((item) => item)}
                 </div>
                 {/* 5TA COL DE ICONOS */}
-                <div className="flex flex-col gap-3 lg:gap-8">
+                <div className="flex flex-col gap-4 lg:gap-8">
                   {[
                     <FaGithub
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#fff"
                       key="GitHub-icon"
                     />,
                     <SiVisualstudiocode
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#0078d7"
                       key="VSC-icon"
                     />,
                     <SiVite
-                      className="text-7xl"
+                      className="text-5xl md:text-7xl"
                       color="#bc34fe"
                       key="Vite-icon"
                     />,
@@ -284,15 +287,17 @@ export const BentoGridItem = ({
         {/* Card n°5: la más grande con img de fondo ---> MODIFICAR */}
         <div
           className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-80"
+            id === 5 && "w-full opacity-50 md:opacity-80"
           }`}
         >
           {/* SpareImg si es la card n°5 */}
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
               className="object-cover object-center w-full h-full"
+              layout="fill"
+              objectFit="cover"
             />
           )}
         </div>
