@@ -1,6 +1,9 @@
+"use client";
+
 import { Calendar, Briefcase, CheckCircle } from "lucide-react";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { experiences } from "@/data";
+import { useState } from "react";
 
 const words = [
   {
@@ -10,6 +13,8 @@ const words = [
 ];
 
 export default function ExperienceSection() {
+  const [showAllAchievements, setShowAllAchievements] = useState(false);
+
   return (
     <section
       className="bg-gradient-to-b from-black via-black-100 via-[50%] to-black-100 sm:px-10 px-5"
@@ -30,18 +35,24 @@ export default function ExperienceSection() {
             >
               <div className="p-6 rounded-lg shadow-lg">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <h3 className="text-xl font-semibold">{exp.role}</h3>
-                  <div className="flex items-center text-gray-600 mt-2 md:mt-0">
-                    <Briefcase className="mr-2" size={18} />
-                    <a
-                      href={exp.companyURL}
-                      target="_blank"
-                      className="mr-4 hover:text-white transition-all duration-300"
-                    >
-                      {exp.company}
-                    </a>
-                    <Calendar className="mr-2" size={18} />
-                    <span>{exp.period}</span>
+                  <h3 className="text-xl font-semibold text-center md:text-start md:w-1/2">
+                    {exp.role}
+                  </h3>
+                  <div className="flex flex-col mt-2 md:mt-0 md:flex-row md:items-center md:justify-end md:w-1/2">
+                    <div className="flex items-center text-gray-300 underline md:no-underline md:hover:underline transition-all md:text-gray-600 mt-2 md:mt-0">
+                      <Briefcase className="mr-2" size={18} />
+                      <a
+                        href={exp.companyURL}
+                        target="_blank"
+                        className="mr-4 hover:text-white transition-all duration-300"
+                      >
+                        {exp.company}
+                      </a>
+                    </div>
+                    <div className="flex items-center text-gray-300 transition-all md:text-gray-600 mt-2 md:mt-0">
+                      <Calendar className="mr-2" size={18} />
+                      <span>{exp.period}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="mb-4">
@@ -81,16 +92,29 @@ export default function ExperienceSection() {
                     Achievements and Impact:
                   </h4>
                   <ul className="space-y-1">
-                    {exp.achievements.map((achievement, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle
-                          className="mr-2 text-green-500 flex-shrink-0"
-                          size={18}
-                        />
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
+                    {exp.achievements
+                      .slice(
+                        0,
+                        showAllAchievements ? exp.achievements.length : 3
+                      )
+                      .map((achievement, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <CheckCircle
+                            className="mr-2 text-green-500 flex-shrink-0"
+                            size={18}
+                          />
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
                   </ul>
+                  {exp.achievements.length > 3 && !showAllAchievements && (
+                    <button
+                      onClick={() => setShowAllAchievements(true)}
+                      className="mt-2 text-blue-500 hover:underline"
+                    >
+                      See more
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
