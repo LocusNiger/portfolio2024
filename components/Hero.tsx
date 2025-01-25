@@ -1,9 +1,7 @@
 "use client";
-
 import { FaLocationArrow } from "react-icons/fa6";
-import { Spotlight } from "./ui/Spotlight";
 import TailwindConnectButton from "./ui/TailwindConnectButton";
-import { HeroHighlight, Highlight } from "./ui/HeroHighlight";
+import { HeroHighlight } from "./ui/HeroHighlight";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -11,22 +9,6 @@ const Hero = () => {
     <div id="hero">
       <div className="flex justify-center items-center relative xl:my-20 z-10">
         <div className="flex flex-col items-center justify-center">
-          {/* SPOTLIGHT: Efecto de luz en los textos */}
-          <div>
-            <Spotlight
-              className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-              fill="white"
-            />
-            <Spotlight
-              className="-top-10 -left-full h-[80vh] w-[50vw]"
-              fill="purple"
-            />
-            <Spotlight
-              className="top-28 left-80 h-[80vh] v-[50vw]"
-              fill="blue"
-            />
-          </div>
-
           {/* HeroHighlight component */}
           <HeroHighlight>
             <motion.h1
@@ -45,9 +27,7 @@ const Hero = () => {
               className="text-3xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
             >
               Shaping Ideas Into <br />
-              <Highlight className="text-white">
-                Engaging Web Experiences
-              </Highlight>
+              Engaging Web Experiences
             </motion.h1>
 
             {/* Texto debajo del H1 */}
