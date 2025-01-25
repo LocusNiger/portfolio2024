@@ -1,23 +1,12 @@
 import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 const Grid = () => {
-  const words = [
-    {
-      text: "About me",
-      className: "text-white text-5xl",
-    },
-  ];
   return (
     <section id="about" className="sm:px-10 px-5">
-      <div className="flex justify-center items-center py-16">
-        <TypewriterEffectSmooth
-          words={words}
-          cursorClassName="bg-blue-500 h-11 w-[3px]"
-        />
-      </div>
-      {/* Efecto de escritura */}
+      <h2 className="text-white text-5xl md:text-8xl font-light pb-16 text-left md:text-right">
+        About me
+      </h2>
       <BentoGrid>
         {/* Mapea el arreglo gridItems donde se encuentra la información a mostrar */}
         {/* Cada item a mostrar en el grid cuenta con todos estos datos, inclusive las clases a pasar */}

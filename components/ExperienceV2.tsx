@@ -1,16 +1,7 @@
 "use client";
-
 import { Calendar, Briefcase, CheckCircle } from "lucide-react";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { experiences } from "@/data";
 import { useState } from "react";
-
-const words = [
-  {
-    text: "Experience",
-    className: "text-white text-5xl font-bold",
-  },
-];
 
 export default function ExperienceSection() {
   const [showAllAchievements, setShowAllAchievements] = useState(false);
@@ -21,12 +12,9 @@ export default function ExperienceSection() {
       id="experience"
     >
       <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center py-16">
-          <TypewriterEffectSmooth
-            words={words}
-            cursorClassName="bg-blue-500 h-11 w-[3px]"
-          />
-        </div>
+        <h2 className="text-white text-5xl md:text-8xl font-light py-16 text-left md:text-right">
+          Experience
+        </h2>
         <div className="flex flex-col gap-10">
           {experiences.map((exp, index) => (
             <div
