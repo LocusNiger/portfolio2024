@@ -41,7 +41,7 @@ const Projects2 = () => {
   return (
     <>
       <section id="projects" className="sm:px-10 px-5">
-        <div className="flex flex-col py-16 px-4">
+        <div className="flex flex-col pb-16 px-4">
           <h2 className="text-white text-5xl md:text-7xl font-medium py-16 text-left md:text-right">
             Projects
           </h2>

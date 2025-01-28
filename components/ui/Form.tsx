@@ -147,14 +147,10 @@ export function Form() {
         </form>
       </div>
       <div className="col-span-1 md:col-span-3 flex flex-col gap-6 mt-4 md:mt-0">
-        <p className="text-neutral-600 text-2xl md:text-base text-center dark:text-neutral-300">
-          My links and resume are below.
-        </p>
-
-        <div className="flex flex-col mx-auto justify-center gap-6 w-full">
+        <div className="flex flex-col mx-auto gap-6 w-[80%]">
           <a href="https://github.com/locusniger" target="_blank">
             <button
-              className=" relative group/btn border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300 flex space-x-2 items-center justify-center px-4 w-full text-black rounded-lg h-10 font-medium shadow-input dark:bg-black-100 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+              className="relative group/btn border border-white/[0.1] hover:border-white/[0.3] transition-all duration-300 flex space-x-2 items-center justify-center px-4 w-full text-black rounded-lg h-10 font-medium shadow-input dark:bg-black-100 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
               type="submit"
             >
               <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
