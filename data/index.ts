@@ -1,7 +1,18 @@
 import { FaCss3Alt, FaHtml5, FaReact, FaTrello } from "react-icons/fa";
 import { IoLogoJavascript, IoLogoSass } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs, SiRedux, SiTypescript, SiVite } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiRedux,
+  SiSass,
+  SiTypescript,
+  SiVite,
+} from "react-icons/si";
+import MockupOficina from "@/public/MockupOficina.png";
+import MockupMesa from "@/public/MockupMesa1.png";
+import MockupIoT from "@/public/MockupIoT.png";
+import MockupISCH from "@/public/MockupISCH.png";
+import MockupPuppina from "@/public/MockupPuppina.png";
 
 export const navItems = [
   { name: "Home", link: "#hero" },
@@ -176,6 +187,7 @@ export const projects = [
       { name: "Redux", icon: SiRedux, color: "#764abc" },
       { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#a5f3fc" },
     ],
+    img: MockupOficina,
     softSkills: [
       "Effective collaboration with UX/UI teams and backend developers",
       "Problem-solving under tight deadlines",
@@ -204,6 +216,7 @@ export const projects = [
       { name: "Redux", icon: SiRedux, color: "#764abc" },
       { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#a5f3fc" },
     ],
+    img: MockupMesa,
     softSkills: [
       "Independence and leadership in designing and developing the platform entirely on my own.",
       "Problem-solving in high-pressure scenarios.",
@@ -232,6 +245,7 @@ export const projects = [
       { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#a5f3fc" },
       { name: "Redux Thunks", icon: SiRedux, color: "#764abc" },
     ],
+    img: MockupIoT,
     softSkills: [
       "Autonomy and leadership in front-end development, taking ownership of the project’s design and implementation.",
       "Adaptability to learn and implement new technologies such as Redux Thunks for managing asynchronous operations.",
@@ -260,6 +274,7 @@ export const projects = [
       { name: "Tailwind CSS", icon: RiTailwindCssFill, color: "#a5f3fc" },
       { name: "Redux", icon: SiRedux, color: "#764abc" },
     ],
+    img: MockupISCH,
     softSkills: [
       "Autonomy and initiative in designing and developing the project from scratch.",
       "Adaptability to implement multilingual functionality and manage content dynamically.",
@@ -275,6 +290,31 @@ export const projects = [
       "Developed reusable components and modular CSS for scalability and easy future updates.",
       "Enhanced SEO performance by implementing best practices, improving visibility and search rankings for the company's target audience.",
       "Received positive feedback from stakeholders for delivering a professional, user-friendly, and high-performing platform that exceeded expectations.",
+    ],
+  },
+  {
+    name: "Puppina Accesorios",
+    description:
+      "Landing page designed as the final project for a web development course, focused on creating an aesthetic and functional interface for a fictional accessories brand.",
+    technologies: [
+      { name: "HTML", icon: FaHtml5, color: "#e34f26" },
+      { name: "CSS", icon: FaCss3Alt, color: "#264de4" },
+      { name: "SASS", icon: SiSass, color: "#cf649a" },
+    ],
+    img: MockupPuppina,
+    softSkills: [
+      "Creativity and attention to detail in creating a visually appealing design.",
+      "Adaptability to use SASS for modular and scalable CSS.",
+      "Time management to deliver the project within strict deadlines.",
+      "Problem-solving to ensure compatibility and responsiveness across devices.",
+      "Commitment to excellence, achieving recognition in the 'Top 10' of the course.",
+    ],
+    achievements: [
+      "Created a responsive and visually appealing landing page using HTML, CSS, and SASS.",
+      "Achieved recognition in the 'Top 10' projects of the course, receiving the third-highest grade overall.",
+      "Designed an intuitive layout to effectively showcase the brand's products and improve user navigation.",
+      "Optimized code using SASS, ensuring modularity and easy scalability for future updates.",
+      "Demonstrated effective use of typography and color theory to enhance the brand's identity and appeal.",
     ],
   },
 ];

@@ -24,10 +24,10 @@ const Hero = () => {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="text-3xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+              className="text-3xl px-4 md:text-6xl font-bold text-neutral-700 dark:text-white max-w-7xl leading-relaxed lg:leading-snug text-center mx-auto bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
             >
               Shaping Ideas Into <br />
-              Engaging Web Experiences
+              Engaging <span className="text-violet-400">Web Experiences</span>
             </motion.h1>
 
             {/* Texto debajo del H1 */}
