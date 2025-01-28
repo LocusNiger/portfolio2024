@@ -12,7 +12,7 @@ export default function ExperienceSection() {
       id="experience"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-white text-5xl md:text-8xl font-light py-16 text-left md:text-right">
+        <h2 className="text-white text-5xl md:text-7xl font-medium py-16 text-left md:text-right">
           Experience
         </h2>
         <div className="flex flex-col gap-10">

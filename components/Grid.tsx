@@ -4,7 +4,7 @@ import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 const Grid = () => {
   return (
     <section id="about" className="sm:px-10 px-5">
-      <h2 className="text-white text-5xl md:text-8xl font-light py-16 text-left md:text-right">
+      <h2 className="text-white text-5xl md:text-7xl font-medium py-16 text-left md:text-right">
         About me
       </h2>
       <BentoGrid>
