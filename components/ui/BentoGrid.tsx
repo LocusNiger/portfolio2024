@@ -124,9 +124,7 @@ export const BentoGridItem = ({
 
         {/* La card n°6 tiene el gradiente de fondo */}
         {id === 6 && (
-          <BackgroundGradientAnimation>
-            {/* <div className="absolute z-50 flex items-center justify-center text-white font-bold " /> */}
-          </BackgroundGradientAnimation>
+          <BackgroundGradientAnimation></BackgroundGradientAnimation>
         )}
 
         {/* Descripción + título de cada card */}
@@ -287,7 +285,7 @@ export const BentoGridItem = ({
         {/* Card n°5: la más grande con img de fondo ---> MODIFICAR */}
         <div
           className={`absolute right-0 -bottom-5 ${
-            id === 5 && "w-full opacity-50 md:opacity-80"
+            id === 5 && "w-full opacity-15 "
           }`}
         >
           {/* SpareImg si es la card n°5 */}

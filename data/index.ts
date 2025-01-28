@@ -64,8 +64,8 @@ export const gridItems = [
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center w-full",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+    img: "",
+    spareImg: "",
   },
 
   {
@@ -73,11 +73,10 @@ export const gridItems = [
     title: "Your ideas, my code. Let’s create something great together.",
     description: "",
     className: "md:col-span-3 md:row-span-2",
-    imgClassName:
-      "absolute right-0 bottom-0 md:w-96 w-72 opacity-50 md:opacity-80",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-72 opacity-15",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
-    spareImg: "/grid.svg",
+    spareImg: "",
   },
   {
     id: 6,
