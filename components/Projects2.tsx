@@ -142,7 +142,7 @@ const Projects2 = () => {
                       </div>
                     </>
                   ) : (
-                    <div className="p-6 flex flex-col gap-6 h-full">
+                    <div className="p-6 flex flex-col gap-6 h-full overflow-y-auto">
                       <div className="flex flex-col gap-2">
                         <h3 className="font-medium text-neutral-700 dark:text-neutral-200 text-lg mb-2">
                           Achievements and Impact
