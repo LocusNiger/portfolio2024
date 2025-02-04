@@ -24,14 +24,14 @@ const Hero = () => {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="text-3xl px-4 md:text-6xl font-bold text-neutral-700 dark:text-white max-w-7xl leading-relaxed lg:leading-snug text-center mx-auto bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
+              className="text-4xl px-4 md:text-6xl font-bold text-neutral-700 dark:text-white max-w-7xl leading-relaxed lg:leading-snug text-center mx-auto bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white"
             >
               Shaping Ideas Into <br />
               Engaging <span className="text-violet-400">Web Experiences</span>
             </motion.h1>
 
             {/* Texto debajo del H1 */}
-            <p className="text-center md:tracking-wider mb-4 text-base md:text-lg lg:text-2xl">
+            <p className="text-center md:tracking-wider mb-4 text-lg lg:text-2xl">
               Hi, I&apos;m Iván, a Frontend Developer based in{" "}
               <span className="text-blue-400 ">ARGENTINA</span>.
             </p>

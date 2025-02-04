@@ -24,7 +24,7 @@ const TailwindConnectButton = ({
       >
         {/* depende la posición que pase es donde renderizará el icono */}
         {position === "left" && icon}
-        <span className="lg:text-base">{title}</span>
+        <span className="text-lg">{title}</span>
         {position === "right" && icon}
       </div>
       <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
