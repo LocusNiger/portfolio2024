@@ -11,17 +11,19 @@ const Contact = () => {
     >
       {/* Título */}
       <div className="flex flex-col justify-center items-center gap-4 pb-12">
-        <div className="flex gap-4 items-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-4 items-center">
           <SiMinds className="text-6xl text-yellow-400 transition-all duration-300 hover:text-yellow-500" />
-          <p className="text-white text-5xl font-semibold">
+          <p className="text-center text-white text-4xl md:text-5xl font-semibold">
             Got ideas? I&apos;ve got the{" "}
-            <span className="text-[#f06529] text-5xl font-bold">skills.</span>{" "}
+            <span className="text-[#f06529] text-4xl md:text-5xl font-bold">
+              skills.
+            </span>{" "}
             Let&apos;s team up.
           </p>
         </div>
 
-        <div className="flex gap-4 items-center">
-          <p className="text-white text-3xl font-semibold">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-4 items-center">
+          <p className="text-white text-center text-3xl font-semibold">
             Tell me more about yourself and what you&apos;ve got in mind
           </p>
           <PiBrainThin className="text-5xl text-rose-400 hover:text-rose-500 transition-all duration-300" />
