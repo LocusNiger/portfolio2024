@@ -42,11 +42,11 @@ const Projects2 = () => {
     <>
       <section id="projects" className="sm:px-10 px-5">
         <div className="flex flex-col pb-16 px-4">
-          <h2 className="text-white text-5xl md:text-7xl font-medium py-16 text-left md:text-right">
+          <h2 className="text-white text-5xl md:text-7xl font-medium py-16 text-center md:text-right">
             Projects
           </h2>
           <div
-            className={`grid grid-cols-2 grid-rows-6 gap-3 ${
+            className={`grid grid-cols-1 md:grid-cols-2 md:grid-rows-6 gap-3 ${
               active ? "blur-sm transition duration-300" : ""
             }`}
           >
@@ -55,14 +55,14 @@ const Projects2 = () => {
                 key={project.name}
                 className={`relative cursor-pointer ${
                   index === 0
-                    ? "row-span-2 md:h-96"
+                    ? "md:row-span-2 h-48 md:h-96"
                     : index === 1
-                    ? "row-span-3 md:h-[576px]"
+                    ? "md:row-span-3 h-48 md:h-[576px]"
                     : index === 2
-                    ? "row-span-2 row-start-3 md:h-96"
+                    ? "md:row-span-2 md:row-start-3 h-48 md:h-96"
                     : index === 3
-                    ? "row-span-3 col-start-2 row-start-4 md:h-[576px]"
-                    : "row-span-2 row-start-5 md:h-96"
+                    ? "md:row-span-3 md:col-start-2 md:row-start-4 h-48 md:h-[576px]"
+                    : "md:row-span-2 md:row-start-5 h-48 md:h-96"
                 }`}
                 onClick={() => setActive(project)}
               >
@@ -91,7 +91,7 @@ const Projects2 = () => {
                 <motion.div
                   layoutId={`card-${active.name}-${id}`}
                   ref={ref}
-                  className="h-[90vh] w-[60vw] flex flex-col bg-black-100 sm:rounded-3xl overflow-hidden"
+                  className="h-[75vh] md:h-[90vh] w-[85vw] md:w-[60vw] flex flex-col bg-black-100 rounded-3xl overflow-hidden"
                 >
                   {!showAchievements ? (
                     <>
